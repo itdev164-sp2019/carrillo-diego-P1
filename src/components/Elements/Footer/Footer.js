@@ -4,8 +4,8 @@ import { Flex } from 'rebass';
 
 const Base = styled(Flex)`
     background-color: #9FB5A8;
-    height: 125px;
-    margin-top: 45px;
+    height: 100px;
+    margin-top: 40px;
 `;
 const H2 = styled.h2`
     font-family: 'Georgia', serif;
