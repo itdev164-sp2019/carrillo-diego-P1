@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex } from 'rebass';
+import { Box } from 'rebass';
 
-const Base = styled(Flex)`
+const Base = styled(Box)`
     background-color: #9FB5A8;
-    height: 100px;
-    margin-top: 40px;
+    height: 80px;
+    width: 100%;
+    margin-top: 1px;
+    bottom: 0px;
 `;
 const H2 = styled.h2`
     font-family: 'Georgia', serif;

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import  styled from 'styled-components';
 import Header from '../src/components/Elements/Header/Header';
 import Footer from '../src/components/Elements/Footer/Footer';
 import { BrowserRouter, Route } from 'react-router-dom'
 import { imageFile } from './ImgSource'
 import Images from './Images/Images';
-
+import Meme from './Pages/Meme'
 import './App.css';
 
 const Collection = props => (
@@ -39,28 +38,34 @@ class App extends Component {
     };
   }
 
+  Click = index => {
+    let state = this.state.images;
+    state.index = index;
+    this.setState({ state });
+  };
+
 
   render() {
     return (
+      <BrowserRouter>
       <div className="App">
         <Header title={this.state.title} />
-         <p>
-           Hello World
-           <Collection memes={this.state.images.images} />
-         </p>
-          
-
-        
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+         <div className="Home">
+        <h2>Select Image and Create Meme</h2>
+        <Route  path='/' exact={true}
+        render={() => (
+          <Collection memes={this.state.images.images} click={this.Click} />
+        )}
+        />
+        <Route path='/Meme' exact={true}
+        render={() => (
+          <Meme img={this.state.images.images[this.state.images.index]} />  
+        )}
+          />
+          </div>
       <Footer Ftitle={this.state.Ftitle}/>
       </div>
+      </BrowserRouter>
     );
   }
 }

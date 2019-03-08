@@ -3,19 +3,21 @@ import { Box } from 'rebass';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Img = styled.img`
+var Img = styled.img`
     cursor: pointer;
-    float: left;
-    height: 150px;
-    width: 150px;
+    Float: left;
+    height: 200px;
+    width: 200px;
+    margin:40px;
+    
 `;
 
 const Images = props => (
-    //<Link to ='/Modal'>
-    <Box>
+    <Link to ='/Meme'>
+    <Box alignImgs='center'>
         <Img src={props.img} alt='' />
     </Box>
-    //</Link>
+    </Link>
 );
 
 export default Images;

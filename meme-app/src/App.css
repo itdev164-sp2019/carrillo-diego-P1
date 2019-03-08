@@ -20,7 +20,10 @@
 }
 
 .Home{
-  
+  background-color: rgb(211, 211, 211);
+  height: 700px;
+  text-align: center;
+  display: block;
 }
 
 
